@@ -23,6 +23,7 @@ body.dark{
 }
 
 .header{
+    display: flex;
     text-align:center;
     margin-bottom:35px;
 }
@@ -321,6 +322,8 @@ button,
     transition:0.3s;
 }
 
+
+
 @media (max-width: 768px){
 
     .container{
@@ -371,6 +374,13 @@ button,
         font-size:15px;
     }
 
+    #theme-toggle{
+        top: 15px;
+        right: 15px;
+        font-size: 20px;
+        padding: 8px;
+    }
+
 }
 
 @media (max-width: 480px){
@@ -378,6 +388,7 @@ button,
     .container{
         width:95%;
         margin:20px auto;
+        padding-top:40px;
     }
 
     h1{
@@ -386,7 +397,12 @@ button,
     }
 
     #theme-toggle{
-        width:100%;
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        width: auto;
+        padding: 8px;
+        font-size: 18px;
     }
 
     #username{

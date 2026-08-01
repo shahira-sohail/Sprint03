@@ -21,10 +21,25 @@ async function getUser(username) {
                                       </div>`;
         const url = `https://api.github.com/users/${username}`;
         const response = await fetch(url);
-        if(!response.ok){
-            profileContainer.innerHTML = "<h2>User not found</h2>";
-            return;
-        }
+        if(response.status === 404){
+    profileContainer.innerHTML = "<h2>User not found</h2>";
+    return;
+}
+
+if(response.status === 403){
+    profileContainer.innerHTML = `
+        <h2>GitHub API rate limit exceeded.</h2>
+        <p>Please try again after some time.</p>
+    `;
+    return;
+}
+
+if(!response.ok){
+    profileContainer.innerHTML = `
+        <h2>Something went wrong.</h2>
+    `;
+    return;
+}
         const data = await response.json();
         const avatar = data.avatar_url;
         const name = data.name || data.login;

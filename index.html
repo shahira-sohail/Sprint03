@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Finder</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>
+                <i class="fa-brands fa-github"></i>
+                GitHub Profile Finder
+            </h1>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+        <form id="search-form" autocomplete="off">
+            <label for="username" class="sr-only">
+                GitHub Username
+            </label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter GitHub Username"
+                spellcheck="false"
+                required
+            >
+            <button type="submit"> Search</button>
+        </form>
+        <div id="profile-container"></div>
+    </div>
+
+<script src="Script.js"></script>
+
+</body>
+</html>

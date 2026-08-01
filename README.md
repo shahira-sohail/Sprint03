@@ -4,6 +4,8 @@
 A responsive web application built with **HTML**, **CSS**, and **Vanilla JavaScript** that allows users to search for any GitHub profile using the official **GitHub REST API**. The application fetches user information asynchronously and displays the latest repositories with README links.
 
 ---
+##Live URL
+https://github-profile-finder-seven-blond.vercel.app/
 
 ## Features
 

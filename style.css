@@ -23,7 +23,6 @@ body.dark{
 }
 
 .header{
-    display: flex;
     text-align:center;
     margin-bottom:35px;
 }
